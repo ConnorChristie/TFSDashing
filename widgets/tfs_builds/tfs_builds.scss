@@ -1,0 +1,86 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color: #47bbb3;
+
+$value-passing-color: #0D901E;
+$value-failing-color: #A73737;
+
+$title-color: rgba(255, 255, 255, 0.7);
+$label-color: rgba(255, 255, 255, 1);
+
+// ----------------------------------------------------------------------------
+// Widget-text styles
+// ----------------------------------------------------------------------------
+.widget-tfs-builds {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  ol, ul {
+    margin: 0 15px;
+    text-align: left;
+    color: $label-color;
+  }
+
+  ol {
+    list-style-position: inside;
+  }
+
+  li {
+    padding-bottom: 10px;
+    clear: both;
+    position: relative;
+  }
+
+  .list-nostyle {
+    list-style: none;
+  }
+
+  .label {
+    color: $label-color;
+    font-weight: 600;
+    float: left;
+    width: 180px;
+
+    position: relative;
+    white-space: nowrap;
+    overflow-x: hidden;
+
+    &:after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-image: -webkit-linear-gradient(right, rgba($background-color, 1), rgba($background-color, 0));
+      background-image: -moz-linear-gradient(right, rgba($background-color, 1), rgba($background-color, 0));
+      background-image: -ms-linear-gradient(right, rgba($background-color, 1), rgba($background-color, 0));
+      background-image: -o-linear-gradient(right, rgba($background-color, 1), rgba($background-color, 0));
+      background-image: linear-gradient(to left, rgba($background-color, 1), rgba($background-color, 0));
+    }
+  }
+
+  .value {
+    float: right;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .passing {
+    color: $value-passing-color;
+  }
+
+  .failing {
+    color: $value-failing-color;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
